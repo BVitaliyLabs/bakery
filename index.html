@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/imask"></script>
+    <title>Bakery</title>
+  </head>
+  <body>
+    <button class="back-to-top-btn" onclick="scrollToTop()">
+      <img src="/assets/img/up-chevron.png" alt="" />
+    </button>
+    <button class="basket-button" onclick="">
+      <img src="/assets/img/shopping-basket.png" alt="" />
+      <div class="basket-items-count">
+        <p></p>
+      </div>
+    </button>
+    <div class="overlay"></div>
+    <div class="thanks">
+      <img src="/assets/img/check-mark.png" alt="">
+      <p>Дякуємо за замовлення!</p>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <button class="close-button">
+          <img src="/assets/ico/close.ico" alt="" />
+        </button>
+        <h2 class="modal-title">Корзина</h2>
+        <form class="basket-form">
+          <div class="basket-items">
+            <div class="basket-item" data-id="">
+              <div class="item-name">
+                <p></p>
+              </div>
+              <input
+                type="number"
+                name=""
+                min="1"
+                value="1"
+                class="input-count"
+              />
+              <a href="" class="remove-item">Видалити</a>
+            </div>
+          </div>
+          <div class="phone-container">
+            <span>Номер телефону</span>
+            <input
+              type="text"
+              class="phone-input"
+              placeholder="+380 00 000 00 00"
+              required
+            />
+          </div>
+          <button class="primary-button create-order">Замовити</button>
+        </form>
+      </div>
+    </div>
+
+    <header>
+      <div class="header-wrapper">
+        <nav>
+          <ul class="menu">
+            <li class="menu-item">
+              <a
+                href="javascript:void(0)"
+                class="menu-item-link"
+                id="production-link"
+                >Продукція</a
+              >
+            </li>
+            <li class="menu-item">
+              <a
+                href="javascript:void(0)"
+                class="menu-item-link"
+                id="benefits-link"
+                >Наші переваги</a
+              >
+            </li>
+            <li class="menu-item">
+              <a
+                href="javascript:void(0)"
+                class="menu-item-link"
+                id="about-link"
+                >Про нас</a
+              >
+            </li>
+            <li class="menu-item">
+              <a
+                href="javascript:void(0)"
+                class="menu-item-link"
+                id="contacts-link"
+                >Контакти</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="general-text-wrapper">
+          <p class="slogan">Найкраща пекарня твого міста!</p>
+          <p class="name">TASTY-WORLD</p>
+          <p class="slogan">Тільки найсвіжіша випічка</p>
+        </div>
+        <button class="primary-button" id="order-button">Замовити</button>
+      </div>
+    </header>
+
+    <section class="production-section" id="production">
+      <h2 class="section-title">
+        <span>Нові смаки</span> вже чекають на тебе!
+      </h2>
+
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="slide"></div>
+        </div>
+        <div class="button-wrapper">
+          <button class="prev-button">
+            <img src="/assets/img/left-arrow.png" alt="" />
+          </button>
+          <div class="spacer"></div>
+          <button class="next-button">
+            <img src="/assets/img/right-arrow.png" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-section" id="benefits">
+      <div class="benefits-section-wrapper">
+        <h2 class="section-title">
+          <span>Турбота та якість</span> в кожному шматочку
+        </h2>
+        <div class="benefits-container">
+          <div class="benefit-item">
+            <img src="/assets/img/farmer.png" alt="" />
+            <p class="benefit-title">Натурально та якісно</p>
+            <p class="benefit-detail">
+              Ми співпрацюємо з надійними фермами, закупляємо лише перевірений
+              та якісний товар
+            </p>
+          </div>
+          <div class="benefit-item">
+            <img src="/assets/img/wheat.png" alt="" />
+            <p class="benefit-title">Від постачальника до вашого столу</p>
+            <p class="benefit-detail">
+              Наша система працює таким чином, що покупець отримує найсвіжіший
+              продукт
+            </p>
+          </div>
+          <div class="benefit-item">
+            <img src="/assets/img/fresh-bread.png" alt="" />
+            <p class="benefit-title">Неповторний смак випічки</p>
+            <p class="benefit-detail">
+              Лише в нашій пекарні ви зможете відчути смак справжньої випічки
+            </p>
+          </div>
+          <div class="benefit-item">
+            <img src="/assets/img/growing-plant.png" alt="" />
+            <p class="benefit-title">Ми піклуємося про природу</p>
+            <p class="benefit-detail">
+              Наша компанія дуже серйозно ставиться до питань стосовно захисту
+              природи
+            </p>
+          </div>
+          <div class="benefit-item">
+            <img src="/assets/img/wind-mill.png" alt="" />
+            <p class="benefit-title">Рецепти перевірені роками</p>
+            <p class="benefit-detail">
+              Традиційні рецепти є основою нашого меню, їх використовували ще в
+              давнину
+            </p>
+          </div>
+          <div class="benefit-item">
+            <img src="/assets/img/shop.png" alt="" />
+            <p class="benefit-title">Затишна пекарня для вас</p>
+            <p class="benefit-detail">
+              Комфортне розміщення та домашній затишок зроблять тебе щасливішим
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-us-section" id="about">
+      <h2 class="section-title">Кілька слів<span> про нас</span></h2>
+      <div class="content-container">
+        <div class="text-container">
+          <p>
+            Ми вкладаємо душу в нашу роботу, використовуючи тільки найкращі
+            інгредієнти, тому що все, що ми робимо, ми робимо з любов'ю!
+            Порадуйте себе, своїх рідних та близьких, адже ви даруєте їм не лише
+            смачну випічку, приготовлену з натуральних продуктів, ви даруєте їм
+            любов, здоров'я та радість.
+          </p>
+          <p>
+            Продукція, що пропонується в пекарнях. готується виключно з
+            натуральних продуктів без використання барвників, ароматизаторів,
+            маргарину, підсилювачів смаку. Тому смак виробів із Хлібниці. це
+            смак справжньої домашньої випічки.
+          </p>
+          <p>
+            Філософія нашої кухні – перетворювати прості інгредієнти в
+            неймовірно смачну їжу. Ця кухня в перш за все базується на виклчній
+            прихильності до місцевих унікальних продуктів.
+          </p>
+        </div>
+        <img src="/assets/img/baker.jpg" alt="" />
+      </div>
+    </section>
+
+    <section class="work-section">
+      <div class="work-section-wrapper">
+        <h2 class="section-title"><span>Етапи роботи </span>з нами</h2>
+        <div class="steps-container">
+          <div class="step-item">
+            <img src="/assets/img/shopping-basket.png" alt="" />
+            <div class="step-content">
+              <span class="step-number">1</span>
+              <div class="content-row">
+                <p class="step-name">Вибір</p>
+                <p class="step-description">Оберіть випічку з нашого меню</p>
+              </div>
+            </div>
+          </div>
+          <div class="step-item">
+            <img src="/assets/img/chronometer.png" alt="" />
+            <div class="step-content">
+              <span class="step-number">2</span>
+              <div class="content-row">
+                <p class="step-name">Деталі</p>
+                <p class="step-description">
+                  Замовте обрані товари та вкажіть телефон
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="step-item">
+            <img src="/assets/img/shipped.png" alt="" />
+            <div class="step-content">
+              <span class="step-number">3</span>
+              <div class="content-row">
+                <p class="step-name">Ми летимо</p>
+                <p class="step-description">
+                  Очікуйте замовлення протягом години
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts-section" id="contacts">
+      <div class="contacts-section-wrapper">
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10377.54228321146!2d27.0007638!3d49.4394292!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47320707dc24d957%3A0xc0e0104be49a0215!2z0JrQtdGC0ZbQu9GWINC_0YPRgNGW!5e0!3m2!1suk!2sua!4v1687130729310!5m2!1suk!2sua"
+            width="700"
+            height="500"
+            style="border: 0; border-radius: 16px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="contacts-wrapper">
+          <h2 class="section-title">
+            <span>Приходьте,</span> ми зачекались вас
+          </h2>
+          <div class="item-container">
+            <div class="contact-item">
+              <img src="/assets/img/map.png" alt="" />
+              <div class="contact-text">
+                <p>Хмельницький,</p>
+                <p>Проспект Миру 70</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <img src="/assets/img/clock.png" alt="" />
+              <div class="contact-text">
+                <p>Працюємо з 10.00 до 21.00</p>
+                <p>Вихідні з 10.00 до 19.00</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <img src="/assets/img/telephone.png" alt="" />
+              <div class="contact-text">
+                <p>+380 77 180 66 55</p>
+                <p>tasty-world@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-wrapper">
+        <div class="logo">
+          <img src="/assets/img/oven.png" alt="" />
+        </div>
+        <div class="rights">
+          <p>© 2023 All rights reserved</p>
+          <p><a href="javascript:void(0)">Політика конфіденційності</a></p>
+        </div>
+        <div class="social">
+          <div class="whatsapp social-item">
+            <img src="/assets/img/whatsapp.png" alt="" />
+          </div>
+          <div class="instagram social-item">
+            <img src="/assets/img/instagram.png" alt="" />
+          </div>
+          <div class="facebook social-item">
+            <img src="/assets/img/facebook-app-symbol.png" alt="" />
+          </div>
+          <div class="twitter social-item">
+            <img src="/assets/img/twitter.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/back-to-top.js"></script>
+    <script src="/scripts/scroll-to-section.js"></script>
+    <script src="/scripts/phone-formatter.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+@font-face {
+    font-family: Segoe Print Bold;
+    src: url(/assets/fonts/segoe-print-bold.ttf);
+  }
+  @font-face {
+    font-family: Amalfi Regular;
+    src: url(/assets/fonts/Amalfi-Regular.ttf);
+  }
+      
+  body {
+    background-color: #d1830d;
+  }
+
+h1 {
+    font-family: Segoe Print Bold;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #f5a225;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 1300px;
+    font-family: sans-serif;
+    color: #303030;
+  }
+
+  th, td {
+    padding: 10px;
+    border: 2px solid #fff;
+  }
+  
+
+  th:first-child, td:first-child {
+    border-left-width: 1px;
+    text-align: center;
+  }
+
+  th:last-child, td:last-child {
+    border-right-width: 1px;
+  }
+
+  tr:first-child th {
+    border-top-width: 1px;
+  }
+
+  tr:last-child td {
+    border-bottom-width: 1px;
+  }
+
+  th:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-left-width: 1px;
+  }
+
+  th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-right-width: 1px;
+  }
+
+  td:first-child {
+    border-left-width: 1px;
+  }
+
+  td:last-child {
+    border-right-width: 1px;
+  }
+  td:nth-child(3) {
+    text-align: center;
+  }
+
+  button {
+    padding: 5px 10px;
+  }
+
+  .inactive-row {
+    background-color: lightgray; 
+  }
+
+  .inactive-row button {
+    pointer-events: none; 
+    opacity: 0.5; 
+  }
